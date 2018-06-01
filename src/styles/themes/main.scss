@@ -1,0 +1,13 @@
+@import './base.scss';
+
+@mixin themes() {
+  &.default {
+    @include base();
+  }
+  &.green {
+    @include base('green');
+  }
+  &.red {
+    @include base('red');
+  }
+}

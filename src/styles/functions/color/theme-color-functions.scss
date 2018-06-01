@@ -1,0 +1,18 @@
+@function getVar($map, $key) {
+  @return map-get($map, $key);
+}
+
+@function mapObj($vars_map, $keys...) {
+  $map: $vars_map;
+  $variant: '';
+  $i: -1;
+  @each $k in $keys {
+    $i: $i + 1;
+    @if ($i != length($keys) - 1) {
+      $map: getVar($map, $k);
+    } @else {
+      $variant: $k;
+    }
+  }
+  @return map-get($map, $variant);
+}

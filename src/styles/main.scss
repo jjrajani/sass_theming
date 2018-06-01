@@ -1,0 +1,14 @@
+@import './functions/main.scss';
+@import './themes/main.scss';
+
+body {
+  .App {
+    text-align: center;
+    @include themes();
+  }
+
+  .App-logo {
+    animation: $logo-animation;
+    height: $logo-height;
+  }
+}

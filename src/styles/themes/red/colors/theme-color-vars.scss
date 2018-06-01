@@ -1,0 +1,25 @@
+$red-theme-colors: (
+  'primary': (
+    'base': #aa3f38,
+    'light': #ffe4e4,
+    'dark': #773127
+  ),
+  'accent': (
+    'base': #f08110,
+    'light': #f2c290,
+    'dark': #5b3005
+  ),
+  'foreground': (
+    'base': #df5a5a,
+    'light': #ff8e8e,
+    'dark': #6b1818
+  ),
+  'background': (
+    'purple': (
+      'thing': orange
+    ),
+    'base': #d45151,
+    'light': rgba(#c62828, 0.7),
+    'dark': #500909
+  )
+);

@@ -1,0 +1,14 @@
+$red-contrast-colors: (
+  'dark': (
+    'primary': rgba(187, 22, 22, 0.89),
+    'secondary': rgba(147, 58, 8, 0.88),
+    'disabled': rgba(232, 175, 175, 0.5),
+    'hint': rgba(30, 32, 231, 1)
+  ),
+  'light': (
+    'primary': rgba(204, 40, 40, 0.83),
+    'secondary': rgba(4, 176, 171, 0.54),
+    'disabled': rgba(108, 54, 34, 0.49),
+    'hint': rgba(35, 17, 233, 0.96)
+  ),
+);

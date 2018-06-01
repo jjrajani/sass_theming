@@ -1,0 +1,36 @@
+@import './default/base.scss';
+@import './green/base.scss';
+@import './red/base.scss';
+// @import './vars/main.scss';
+
+@mixin base($theme: 'default') {
+  $theme-color-map: $theme-colors;
+  $contrast-color-map:  $contrast-colors;
+  @if $theme == 'green' {
+    $theme-color-map: $green-theme-colors;
+    $contrast-color-map:  $green-contrast-colors;
+  } @else if $theme == 'red' {
+    $theme-color-map: $red-theme-colors;
+    $contrast-color-map:  $red-contrast-colors;
+  }
+
+  // @include vars($theme);
+  $app-background: mapObj($theme-color-map, 'background', 'dark');
+  $dark-border-color: mapObj($theme-color-map, 'background', 'dark');
+
+  background-color: $app-background; // "primary base" color;
+  border: $dark-border-color; // "foreground light" color;
+  @include contrast('dark');
+  .App-header {
+    height: theme-color($theme-color-map, 'primary', 'base');
+    padding: $header-padding;
+    color: theme-color($theme-color-map, 'background', 'light');
+  }
+  .App-title {
+    @include text-setting('lg');
+  }
+
+  .App-intro {
+    font-size: text-setting('xl');
+  }
+}

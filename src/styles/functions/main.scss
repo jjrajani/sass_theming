@@ -1,0 +1,13 @@
+@import './color/theme-color-functions.scss';
+@import './color/contrast-color-functions.scss';
+@import './font/font-size-functions.scss';
+
+
+@function getStyle($map, $keys) {
+  $value: null;
+  @each $key in $keys {
+    $value: map-get($map, $key);    
+  }
+  @return $value;
+  // @return map-get(map-get($text-settings, $level), 'line-height');
+}
